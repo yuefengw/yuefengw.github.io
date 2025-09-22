@@ -13,6 +13,692 @@
         <pubDate>Mon, 22 Sep 2025 21:37:57 +0800</pubDate>
         
         <guid>https://yuefengw.github.io/p/myfirstblog/</guid>
+        <description>&lt;h5 id=&#34;0522-day1-p1-55&#34;&gt;0522 day1 P1-55
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;被 static 修饰后的方法称之为静态方法 静态方法不需要为其创建对象就能调用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;变量名不能重复 上面定义了int a=1;  下面a就不能int a=10了 但是可以a=10;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;定义long类型的变量：long a = 99999999999999&lt;strong&gt;L&lt;/strong&gt;;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;定义float类型的变量：float b = 3.14&lt;strong&gt;F&lt;/strong&gt;;  double就不需要了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;project -&amp;gt; module -&amp;gt; package -&amp;gt; class&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;小数参与计算结果可能不精确eg. 1.1+1.01&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;byte short char运算时都是先转换为int&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;1+99+“哈哈” -&amp;gt;“100哈哈”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;a+=b 等价于 a = type(a)(a+b)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;int[] arr = new int[]{0, 2, 4}  int[] arr = {0, 2, 4}&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;0523--day2-p56-62&#34;&gt;0523  day2 P56-62
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;arr.length&lt;/li&gt;
+&lt;li&gt;IDEA中 数组名.fori 快速补全&lt;/li&gt;
+&lt;li&gt;数组动态初始化  int[] arr = new int[3] 默认值int0 小数0.0 字符空格 bool false 其他null&lt;/li&gt;
+&lt;li&gt;Java内存分配
+&lt;ul&gt;
+&lt;li&gt;栈 方法运行时使用&lt;/li&gt;
+&lt;li&gt;堆 对象数组 new出来的&lt;/li&gt;
+&lt;li&gt;方法区 存储可以运行的class文件&lt;/li&gt;
+&lt;li&gt;本地方法栈 JVM使用操作系统功能的时候使用 和开发无关&lt;/li&gt;
+&lt;li&gt;寄存器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;0525--day3-p63-93&#34;&gt;0525  day3 P63-93
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;引用数据类型 像数组这样 变量名代指地址的这种引用关系 叫引用数据类型&lt;/li&gt;
+&lt;li&gt;javabean ptg快速生成
+&lt;ul&gt;
+&lt;li&gt;私有化成员变量 pirvate string name;&lt;/li&gt;
+&lt;li&gt;空参构造 Alt+Ins Constructor Select None&lt;/li&gt;
+&lt;li&gt;全参构造方法 Alt+Ins Constructor 全选 确定&lt;/li&gt;
+&lt;li&gt;get set方法 Alt+Ins Getters and Setters  全选 确定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;0528-day4-p94-115&#34;&gt;0528 day4 P94-115
+&lt;/h5&gt;&lt;h5 id=&#34;0530-day5-p116-123&#34;&gt;0530 day5 P116-123
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;静态方法中没有this关键字 因为静态定义的东西都是共享的 和某个对象没什么关系 所以就没有this&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静态方法只能访问静态的内容 非静态的可以访问所有&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;jdk8以后，静态变量存储在堆当中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;被static修饰的变量叫静态变量 所有对象共享&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;0531-day06-p124-143&#34;&gt;0531 day06 P124-143
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;只支持单继承 但是支持多层继承&lt;/li&gt;
+&lt;li&gt;每个类都直接或者间接继承obj类&lt;/li&gt;
+&lt;li&gt;方法只能继承非私有的方法 构造方法不能被子类继承 成员变量都能够继承 私有的成员变量不能直接使用需要get来获得&lt;/li&gt;
+&lt;li&gt;空参构造方法是虚拟机自动添加的&lt;/li&gt;
+&lt;li&gt;方法区存字节码文件 类的字节码文件放在方法区&lt;/li&gt;
+&lt;li&gt;继承的虚方法表存可以被调用的方法  从上往下传下去 Obj的虚方法表有5个方法&lt;/li&gt;
+&lt;li&gt;继承中的成员变量 就近原则  方法也是一样的&lt;/li&gt;
+&lt;li&gt;this.name 子类调用 super.name 调用父类的&lt;/li&gt;
+&lt;li&gt;重写 ，从上往下传递虚方法表的时候 后面重写的方法会将前面的方法覆盖&lt;/li&gt;
+&lt;li&gt;子类中的构造方法默认访问父类中的无参构造 再执行自己 也就是先初始化父类中的参数&lt;/li&gt;
+&lt;li&gt;多态 父类 = 子类对象    子类对象赋值给父类类型&lt;/li&gt;
+&lt;li&gt;多态调用成员变量：编译看左边 调用也看左边&lt;/li&gt;
+&lt;li&gt;多态调用成员方法：编译看左边 调用看右边 调用的是重写的方法&lt;/li&gt;
+&lt;li&gt;所以在多态调用成员方法的时候 这个方法父子类里面都要有 因为编译看的是父类 运行的时候用的是子类&lt;/li&gt;
+&lt;li&gt;多态缺点：不能调用子类特有的的方法 因为编译看左边父类 父类都没有子类的特有方法 编译不了就别说调用了&lt;/li&gt;
+&lt;li&gt;解决方案：将父类对象转换为子类类型就ok&lt;/li&gt;
+&lt;li&gt;a instanceof Dog 判断类型是否相同  a instanceof Dog d 是的话直接强转然后赋值给d&lt;/li&gt;
+&lt;li&gt;父类有的方法子类再写一遍定制 叫做重写&lt;/li&gt;
+&lt;li&gt;已经有的方法 再实现一样相同方法名字的方法 这个过程叫重载 方法名是相同的 但是参数是不同的 这两个重载的方法通常存在于同一个类之中&lt;/li&gt;
+&lt;li&gt;shift  + F6批量修改&lt;/li&gt;
+&lt;li&gt;重载 和多态其实是有点类似的 特别是在传入参数类型不一样的时候 比方说 重载mothed(Dog d); mothed(Cat c); 其实和多态methed(Animal a); 是一回事&lt;/li&gt;
+&lt;li&gt;包就是文件夹 管理不同功能的java类 使用同一个包中的其他类 不需要导包 java.lang 也不需要 其他情况都需要导包  使用两个包中的同名类 此时要写 全类名&lt;/li&gt;
+&lt;li&gt;final 修饰的方法不能被重写 修饰类的类不能被继承 修饰的变量只能被赋值一次&lt;/li&gt;
+&lt;li&gt;final修饰的变量是基本数据类型的时候不能再次赋值 是引用数据类型的时候 地址不能改变 但是对象的内容还是可以改变的&lt;/li&gt;
+&lt;li&gt;字符串是不可变的&lt;/li&gt;
+&lt;li&gt;ctrl + shift + u 变大写  常量一般全是大写和下划线的组合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;C:/Users/92159/AppData/Roaming/Typora/typora-user-images/image-20250531164412606.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250531164412606&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;构造代码块 将多个构造方法中重复的语句拿出来放在定义成员变量的后面  	创建对象时 先执行构造代码块 在执行构造方法 不灵活&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静态代码块：随着类的加载而加载 只执行一次 static{} 数据初始化用这个&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;继承含抽象方法类的子类必须强制重写，就比方说老师和学生的父类中都有工作 老师的工作是讲课 学生的工作是学习 子类直接调用父类此时看起来并不合理 一般都需要在子类中进行重写 这个时候在父类work方法用abstract修饰 强制后面的子类重写这个方法 当然这个子类也是抽象类的时候就不要了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CTRL+p 查看需要输入的参数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;为什么要强制下面的子类重写呢？因为这是在给子类定下一个模板 这个模板强制不同的子类实现相同方法的时候方法名相同 把方法体不一样的抽象出来，当有新的子类需要创建的时候根据父类已有的规则进行书写&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;抽象方法：一般是方法体不一样的时候用的 而且下面的子类都能用到这个方法 只是需要定制而已&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接口的成员变量是常量 会自动给你加public static final 接口没有构造方法 接口的成员方法默认修饰符public abstract&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接口和接口之间是继承关系 可以单继承也可以多继承&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接口中可以存在默认方法 这种方法在被implement的时候不需要一定被重写  后面需要强制重写的是接口中的抽象方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果多个接口中存在同一个默认方法的方法名 后面的子类必须对其重写&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接口中也可以定义静态方法 静态方法不能被重写 只能通过接口名来调用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静态的只能给静态的使用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接口是一种规则 想要那个类拥有哪一个行为，就让这个类实现对应的接口就可以了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;abstract修饰的类 外界不能创建这个类的对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;适配器xxxAdapter相当于个中间层 当接口中有很多个抽象方法 但是我们实现类里面只需要用接口中一个方法 此时在适配器里面将接口中的全部抽象方法空实现一下 然后实现类继承适配器再重写需要的方法即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;内部类可以直接访问外部类的成员 包括私有&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;外部类不能直接访问内部类成员 必须先创建内部类的对象在访问&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当内部类被private修饰的时候 此时外面不能直接访问内部类 联想之前类的私有变量需要通过Get方法访问 这里也是一样的 可以再实现一个方法返回内部类：public Inner getInner 这里面return new Inner();&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静态内部类只能访问外部类中静态的东西 要想访问非静态的 得先在内部类中创建对象再访问&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;局部内部类 定义在方法里面&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;匿名内部类 实现类里面重写接口方法往往会给类名 如果不给类名 那就是匿名内部类 其实就是下面红框的位置本来是实现类的类名public clsss Dog implement Swim 换成new Swim () 这个Swim是接口&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;C:/Users/92159/AppData/Roaming/Typora/typora-user-images/image-20250531192717223.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250531192717223&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当这个接口替换成有抽象方法的类的时候 也是一样的  只不过匿名内部类和接口之间是implement关系 匿名内部类和有抽象方法的类之间是继承关系&lt;/li&gt;
+&lt;li&gt;匿名内部类的名字：类名$1.class  匿名只是没有显式的名字 可以链式编程直接用 也能直接赋值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;C:/Users/92159/AppData/Roaming/Typora/typora-user-images/image-20250531194045117.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250531194045117&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;之前想要调用method方法需要先创建一个Animal子类的对象，但是现在直接传入匿名内部类就可以&lt;/li&gt;
+&lt;li&gt;当方法接收的参数是接口或者类的时候 可以传给这个&lt;strong&gt;接口的实现类对象/这个类的子类&lt;/strong&gt; 如果这个&lt;strong&gt;实现类/子类&lt;/strong&gt;只用一次 就传匿名内部类&lt;/li&gt;
+&lt;li&gt;重写是对抽象类的重写 重载是可以有相同的方法名 多态是子类对象可以直接赋值给父类对象（要有继承）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;0602-day07-p144-184&#34;&gt;0602 day07 P144-184
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;Ctrl alt+m 快速创建所选内容的方法&lt;/li&gt;
+&lt;li&gt;Ctrl alt + &amp;lt;- 回到鼠标停留的地方&lt;/li&gt;
+&lt;li&gt;打印一个对象 打印的是他的地址 要是想打印这个对象的属性 需要重写ToString&lt;/li&gt;
+&lt;li&gt;还有重写之后的equals方法 比较的就是对象内部的属性值了&lt;/li&gt;
+&lt;li&gt;Cloneable 标记接口 实现表示可被克隆&lt;/li&gt;
+&lt;li&gt;克隆对象：重写Object中的clone方法（调用父类克隆方法 返回出去克隆对象） 让JavaBean实现Cloneable  创建原对象调用克隆&lt;/li&gt;
+&lt;li&gt;浅拷贝：不管对象的属性是基本数据类型还是引用数据类型 都完全拷贝过来&lt;/li&gt;
+&lt;li&gt;深拷贝：基本数据类型拷贝过来 字符串直接复用 引用数据类型 会创建一个新的&lt;/li&gt;
+&lt;li&gt;ctrl alt + v 自动生成左边&lt;/li&gt;
+&lt;li&gt;BigInteger 将大整数分段存储 signum存符号 mag32位一组 转成十进制存在mag&lt;/li&gt;
+&lt;li&gt;数组最多能存2.1B个元素，每个元素能表示4.2B的范围 所以BigInteger能存最大$4.2B^{2.1B}$&lt;/li&gt;
+&lt;li&gt;bigDecimal : 静态方法BigDecimal.valueOf() 这个x如果是double类型 返回的都是new出来的 如果是0-10的整数，返回的是提前创建好的对象，超出了返回的就是new出来的 double之内的用valueof就行&lt;/li&gt;
+&lt;li&gt;BigDecimal原理：不管传入的什么 在底层都会变成字符串，将每个字符的AsCii值存到byte数组中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;C:/Users/92159/AppData/Roaming/Typora/typora-user-images/image-20250602153704415.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250602153704415&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;注意只能匹配一个字符&lt;/li&gt;
+&lt;li&gt;包装类：将基本数据类型对应的引用数据类型&lt;/li&gt;
+&lt;li&gt;接收的参数是对象 但是现在只有基本数据类型 这个时候用包装类&lt;/li&gt;
+&lt;li&gt;自动装箱：将将基本数据类型自动变成其对应的包装类 Integer i=10 j=2 直接i+j就ok&lt;/li&gt;
+&lt;li&gt;自动拆箱：上面反过来 int ii=i&lt;/li&gt;
+&lt;li&gt;静态方法直接类名.就能调用&lt;/li&gt;
+&lt;li&gt;集合里面是不能存储基本数据类型的 只能存其对应的包装类&lt;/li&gt;
+&lt;li&gt;泛型 包装类感觉以后有必要重新看&lt;/li&gt;
+&lt;li&gt;lambda用于简化匿名内部类的书写 而且只能简化函数式&lt;strong&gt;接口&lt;/strong&gt;的匿名内部类写法&lt;/li&gt;
+&lt;li&gt;有且只有一个抽象方法的接口叫函数式接口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;0602-day08-p185-200&#34;&gt;0602 day08 P185-200
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;List集合：有序 可重复 有索引&lt;/li&gt;
+&lt;li&gt;Collection是一个接口 List、Set基于它来实现&lt;/li&gt;
+&lt;li&gt;.add方法 ： 往set里面添加新元素 可能返回false&lt;/li&gt;
+&lt;li&gt;因为collection里面定义的是共性的方法，当用多态的方式实现List的时候，此时不能通过索引进行删除。只能通过元素的对象进行删除&lt;/li&gt;
+&lt;li&gt;删除方法会有一个布尔类型的返回值，删除成功返回true，删除失败返回false&lt;/li&gt;
+&lt;li&gt;因为contains方在底层依赖equals方法判断对象是否一致的。如果存的是自定义对象，没有重写equals方法，那么默认使用object类中的equals方法进行判断&lt;/li&gt;
+&lt;li&gt;Collection的迭代器遍历&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;C:/Users/92159/AppData/Roaming/Typora/typora-user-images/image-20250603100749049.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250603100749049&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;迭代器遍历时，不能用集合的方法进行增加或者删除 只能用it,remove() 添加暂时没有办法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Collection的增强for遍历 只有单列集合和数组可以用 for(String s : coll){ }   快捷方式coll.for 回车&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;边遍历边修改s，coll不受影响&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Collection的Lambda表达式遍历：coll.forEach(s-&amp;gt;So(s))&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;List&amp;lt;string&amp;gt;list =new ArrayList&amp;lt;&amp;gt;();&lt;/code&gt;List是一个接口，这里只能创建他的实现类对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;调用方法出现重载时，会优先调用实参和形参类型一致的那个方法 比方说:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;List&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;// 这里自动装箱&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;remove&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//这里就没有自动装箱&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;remove&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//这俩remove不一样&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;List 除了上面的三种遍历 还有列表迭代器遍历ListIterator 普通for遍历&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;列表迭代器遍历ListIterator 在迭代的时候可以用迭代器本身的方法添加元素&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;C:/Users/92159/AppData/Roaming/Typora/typora-user-images/image-20250603103754550.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250603103754550&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ArrayList的底层就是一个数组&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;C:/Users/92159/AppData/Roaming/Typora/typora-user-images/image-20250603104334545.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250603104334545&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在以后如何避免并发修改异常：在使用选代器或者是增强for遍历集合的过程中，不要使用集合的方法去添加或者删除元素即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;泛型：约束操作的数据类型 只支持引用数据类型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不添加泛型约束的时候可以往集合里面添加任意obj类型的数据，但是读取的时候也读到的是obj，此时不能调用子类obj的特有功能，就算强制类型转换，也容易转换异常&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;java中的泛型是伪泛型，只是在门口强制你为某种类型，编译的时候会泛型擦除，都看成obj，读取的时候再强制转换为某种规定的泛型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;泛型不能写基本数据类型，因为最后都要obj类型，只有写基本数据类型对应的包装类才能转为obj类型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;指定泛型后，可以传入该类类型或者该类的子类类型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;泛型类：不确定类的类型 public class ListUtil&lt;E&gt;{ }&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;泛型接口：不确定类的类型 public interface ListUtil&lt;E&gt;{ }&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;泛型方法：public static&lt;E&gt; void addAll(ArrayList&lt;E&gt; list, e1,E e2）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;泛型不具备继承性，但是数据有继承性：比方说两个父子类，method方法里面需要传入泛型为父类的集合，调用method时传入子类的集合时会报错，解决方案：（之前多态子类类型可以直接传给参数为父类的方法的那里用到的只是单个参数，而不是这里的泛型集合）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;C:/Users/92159/AppData/Roaming/Typora/typora-user-images/image-20250603115135194.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250603115135194&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;但是数据有继承性：父类泛型的集合能传入子类类型的数据&lt;/li&gt;
+&lt;li&gt;Set：无序 不重复 无索引&lt;/li&gt;
+&lt;li&gt;HashSet：jdk8以后 当链表长度超过8 数组长度大于等于64 的时候 自动转换为红黑树 如果集合中存储的是自定义对象，必须重写HaseCode和equals方法&lt;/li&gt;
+&lt;li&gt;不重写HaseCode方法时，不同对象即使含有相同的属性值，计算出来的哈希值也是不同的，重写之后，不同对象属性值相等的的时候哈希值就是相同的&lt;/li&gt;
+&lt;li&gt;为什么存取顺序是不一样的？哈希后得到的idx随机的，读取的时候按照idx顺序读取&lt;/li&gt;
+&lt;li&gt;存String和Integer的时候不需要重写&lt;/li&gt;
+&lt;li&gt;LinkedHashSet：有序不重复无索引 在哈希表的基础上添加双链表记录存储顺序&lt;/li&gt;
+&lt;li&gt;TreeSet：不重复无索引可排序 基于红黑树 实现comparable指定比较规则 或者传递比较器指定规则&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;C:/Users/92159/AppData/Roaming/Typora/typora-user-images/image-20250603145025374.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20250603145025374&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h5 id=&#34;0604-day09-pp1-20&#34;&gt;0604 day09 PP1-20
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;接口不能直接创建他的对象 要创建他实现类的对象
+Map是接口，HashMap是实现类&lt;/li&gt;
+&lt;li&gt;HashMap键的位置 存储的如果是自定义对象 需要重写HashCode和equals&lt;/li&gt;
+&lt;li&gt;Hashmap是哈希表结构的，JDK8开始由数组，链表，红黑树组成的。既然有红黑树，HashMap的键是否需要实现compareable接口或者传递比较器对象呢? 不需要的。因为在Hashmap的底层，默认是利用哈希值的大小关系来创建红黑树的&lt;/li&gt;
+&lt;li&gt;可变参数 public static int getSum(int…args)  这个args其实就是一个数组  可变参数只能写在最后 且只能有一个&lt;/li&gt;
+&lt;li&gt;Collections.addAll(list, “aa”, “bb”)     Collections.shuffle(list)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;0605-day10-pp21-40&#34;&gt;0605 day10 PP21-40
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Hashmap有entry = hm.entrySet()方法 然后增强for遍历&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取不可变的Set和Map集合时，里面的参数一定要保证唯一性 List.of Set.of Map.of&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取不可变的Map里面最多存10 个键值对&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;stream流&lt;/strong&gt;：&lt;code&gt;list1.stream().filter(name-&amp;gt;name.startWith(“张”)).fillter(name-&amp;gt;name.length()==3).forEach(name -&amp;gt; so(name))&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;双列集合无法直接使用stream 只能先获得kv或者entrySet在用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数组：Arrays.stream(arr).forEach(s-&amp;gt;so(s))&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可变参数的底层是一个数组 Stream.of(1,2,3,4,5) 这样进去会自动装箱 但是 arr=[1,2,3] Stream.of(arr)就不行了 要想Stream.of(arr)的话arr里面存的必须是引用数据类型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用流的时候 不会影响原来的数据  流用一次就不能用了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ctrl alt + / 注释&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;list.stream().limit(3)获取前三个 skip跳过前几个distinct去重 依赖HashCode和equals   concat(l1.stream(), l2.stream())合并两个流&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Arrays.toString(arr) 格式化输出&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;终结方法：forEach count toArray collect&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;toArray 创建一个指定类型的数组将流里面的每个数据放到数组中 toArray(value -&amp;gt; new String[value])&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;list.stream().collect(Collectors.toList()) 也能to Set map、收集到map的时候需要指定kv（s -&amp;gt; s.split(“-”)[0], s-&amp;gt;s -&amp;gt; s.split(“-”)[1]），且k不能重复 、像这里指定kv的时候用lambda表达式快一点，要不然还得new Function 还得指定类型 很麻烦&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;0606-day11-pp41-62&#34;&gt;0606 day11 PP41-62
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;方法引用&lt;/strong&gt;有点像c里面的那个cmp  Arrays.sort(arr, ClassName::staticMethod) 这里不是静态方法也可以::&lt;/li&gt;
+&lt;li&gt;list.stream().map(Integer::parseInt)  这个map相当于apply，list里面的元素apply parseInt方法&lt;/li&gt;
+&lt;li&gt;其他类 其他类对象::methodName    本类this::methodName      父类super::methodName&lt;/li&gt;
+&lt;li&gt;当前类是静态类引用本类的时候只能new currClass()::methodName、反正用对象名::methodName肯定可以&lt;/li&gt;
+&lt;li&gt;toArray(value -&amp;gt; new String[value]) lambda表达式、toArray(String[]::new) 方法引用，引用数组的构造方法、都是干的一件事&lt;/li&gt;
+&lt;li&gt;list.stream().map(Student::new).toArray(Student[]::new) 对list的每个元素引用构造方法转成Stu类再放到arr中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;C:/Users/92159/AppData/Roaming/Typora/typora-user-images/image-20250606112840114.png&#34; alt=&#34;image-20250606112840114&#34; style=&#34;zoom:67%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;引用空参方法时，原来的抽象方法只有一个参数就ok: 重写apply抽象方法中只有一个参数，后面是空参，所以可以直接Student::getName&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;异常Exception&lt;/strong&gt;：编译异常，运行异常&lt;/li&gt;
+&lt;li&gt;编译异常要手动处理，提醒程序员检查本地信息&lt;/li&gt;
+&lt;li&gt;出现了异常才会执行catch&lt;/li&gt;
+&lt;li&gt;try里面遇到异常就去跳到catch处执行，不会再执行try剩下的代码，可以有多个catch，jdk7以后可以catch(e1 | e1 e)&lt;/li&gt;
+&lt;li&gt;出现的异常catch不住就是正常报错&lt;/li&gt;
+&lt;li&gt;ctrl alt t 选中代码块被某种语句嵌套&lt;/li&gt;
+&lt;li&gt;System.err.print(111) 红色字打印&lt;/li&gt;
+&lt;li&gt;异常抛出：手动throw new xxxException，下面的不再执行，在当前方法中可能出现的异常 可以在方法定义处 public void method throws xx1Exception,xx1Exception()，当然运行异常可以省略不写&lt;/li&gt;
+&lt;li&gt;自定义异常：异常类、继承、空参带参构造&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;0607-day12-pp63-118&#34;&gt;0607 day12 PP63-118
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;File&lt;/strong&gt;：createNewFile 创建指定后缀的&lt;strong&gt;文件&lt;/strong&gt; txt csv, 不存在创建成功，存在不创建&lt;/li&gt;
+&lt;li&gt;mkdir创建文件夹 已经存在则无法创建，只能创建单层文件夹，mkdirs能创建多级文件夹，也能创建单层&lt;/li&gt;
+&lt;li&gt;delete删除文件不走回收站，删空文件夹也是，有内容的文件夹删不了&lt;/li&gt;
+&lt;li&gt;f.listFiles() 获取文件夹里的所有内容 以数组返回&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IO基本流&lt;/strong&gt;：FileOutputStream fos = new FileOutputStream (“myio\a.txt”)， a.txt不存在会创建这个文件， 如果文件已经存在会清空文件, FileOutputStream (“myio\a.txt”,true)续写&lt;/li&gt;
+&lt;li&gt;fos.write的参数是整数 对应ASCII码,  可以是一个，也可以是byte数组， 使用完要释放资源f.close()&lt;/li&gt;
+&lt;li&gt;str=“qwe”;   byte[] bytes=str.getBytes()&lt;/li&gt;
+&lt;li&gt;FileInputStream fis = new FileInputStream(“myio\a.txt”)&lt;/li&gt;
+&lt;li&gt;fis.read(b or bytes[])&lt;/li&gt;
+&lt;li&gt;释放资源 先开的后关闭&lt;/li&gt;
+&lt;li&gt;GBK 英文一个字节高位补0 中文两个字节高位1&lt;/li&gt;
+&lt;li&gt;UTF：Unicode transfer format utf-8用1-4个字节保存 英文1个字节0xxx xxxx 中文3个字节1110xxxx 10xxxxxx 10xxxxxx&lt;/li&gt;
+&lt;li&gt;不要用字节流读文本文件，一次读一个字节会乱码&lt;/li&gt;
+&lt;li&gt;字符流 默认逐字节读取，遇到中文就会一次读多个&lt;/li&gt;
+&lt;li&gt;FileReader fr = new FileReader(“myio\a.txt”); &lt;strong&gt;int&lt;/strong&gt; ch=fr.read()，字节流是byte，这里是int，再char(ch)转成能看懂的, 也可以&lt;strong&gt;char&lt;/strong&gt;[] chars=new char[2]; len = fr.read(chars);so(new String(chars, 0, len))，这种有参的方法就不用接受为int再强制转换了，数组里放的就是强转之后的字符&lt;/li&gt;
+&lt;li&gt;FileReader 会先将文件中的8192个字节数据放到缓冲区，每次从buffer里读&lt;/li&gt;
+&lt;li&gt;FileWriter 先将数据写到缓冲区，放不下了自动保存到文件，或者fw.flush()手动写进去或者关流的时候写进去&lt;/li&gt;
+&lt;li&gt;FileWriter和FileInputStream 类似 fw.write(“hah哈哈”)&lt;/li&gt;
+&lt;li&gt;字节字符&lt;strong&gt;缓冲流&lt;/strong&gt;都是基于字节字符基本流实现，有了8KB缓冲区io会快一点&lt;/li&gt;
+&lt;li&gt;字节缓冲输入流：BufferedInputStream bis = new BufferedInputStream(new FileInputStream (“myio\a.txt”)) ，关流的时候只关缓冲流&lt;/li&gt;
+&lt;li&gt;字符缓冲输入流：BufferedReader br= new BufferedReader(new FileReader(“myio\a.txt”)); String line = br.readLine()， 读到最后返回null&lt;/li&gt;
+&lt;li&gt;字符缓冲输出流 BufferedWriter , bw.newLine()自动根据平台写入换行&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;转换流&lt;/strong&gt;本身就是字符流：InputStreamReader isr = new InputStreamReader(new FileInputStream (“myio\a.txt”), “GBK”)；指定编码方式，前面淘汰了，jdk11以后：FileReader fr = new FileReader(“path”, Charset.forName(“GBK”));&lt;/li&gt;
+&lt;li&gt;BufferedReader(InputStreamReader(new FileInputStream (“myio\a.txt”))); 字节流转字符流再加缓冲区… 这样字节流就能使用字符流中的方法了&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;序列化流&lt;/strong&gt;：操作对象读写，对象类的javabean中需要实现序列化接口Serializable，这个接口和Cloneable一样是标记接口，ObjectOutputStream oos= new ObjectOutputStream(new FileOutputStream (“myio\a.txt”))；oos.writeObject(stu); Obj o = ois.readObject()，强制转化Stu类也行&lt;/li&gt;
+&lt;li&gt;private static final long serialVersionUid=1L;防止反序列化之前JavaBean成员被修改过报错， 在JavaBean中定义成员变量的时候private transient String address；加了瞬态关键字就不会将此变量序列化到本地文件中&lt;/li&gt;
+&lt;li&gt;序列化多个对象的时候可以放到list里面，读出的时候也读到一次性读出来到list&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;打印流&lt;/strong&gt;：字节打印流PrintStream，实例化对象的时候和上面一样，都是对基本流的“包装”，默认自动刷新；字符打印流PrintWriter pw = new PrintWriter(new FileWriter(“myio\a.txt”), true)； 不开自动刷新的话只能关流的时候写入&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;压缩流和解压缩流&lt;/strong&gt;：解压本质：将压缩包里面的每个ZipEntry文件按照层级拷贝到本地文件夹中; 压缩本质：将每个文件/文件夹看成ZipEntry对象放到压缩包中&lt;/li&gt;
+&lt;li&gt;解压：ZipInputStream zip = new ZipInputStream (new FileInputStream(src)); entry = zip.getNextEntry();  解压出来所以是ZipOutputStream&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Commons-io&lt;/strong&gt;：复制文件FileUtils.copyFile(src, tgt)；拷贝文件夹里面的到tgt FileUtils.copyDirectory(src, tgt)；拷贝文件夹到目标FileUtils.copyDirectory(src, tgt)；deleteDirectory(src); clearDirectory(src);&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Hutool&lt;/strong&gt;：创建file对象File file = FileUtil.file(“D:\”, “a”, “a.txt”);  创建文件/夹FileUtil.touch(file)；写入文件 FileUtil.WriteLines(list, file, “UTF-8”, false)这里可以选是否append；追加写入FileUtil.appendLines(list, file); 读数据，会返回集合FileUtil.readLines(file)&lt;/li&gt;
+&lt;li&gt;Properties双列集合 Properties prop=new Properties()；可以往里面添加任意类型、prop.put(key, value); prop.store( fos, “注释”); prop.load(fis)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;0608-day13-pp135-167&#34;&gt;0608 day13 PP135-167
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;多线程&lt;/strong&gt;：线程包含在进程之中，是OS进行运算调度的最小单位&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;并发：同一时刻，多个指令在单个cpu上交替执行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;并行：同一时刻，多个指令在多个cpu上同时执行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第一种启动方式： 自定义类继承Thread、重写run、对象start； MyThread t1 = new MyThread (); t1.setName(“xc1”);t1.strat();&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二种启动方式： 自定义类实现Runnable接口、重写run、 自定义类对象mr在创建线程对象时传入Thread t1 = newThread (mr); t1.strat(); 这个mr看做任务对象或者是线程要跑的参数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Thread .currenrThread().getName()&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第三种启动方式(可以获取多线程运行的结果)：自定义类实现Callable并指定返回类型、创建FutureTask对象管理线程运行结果&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;MyCallable&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mc&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MyCallable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FutureTask&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ft&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FutureTask&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t1&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Thread&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;strat&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ft&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;构造方法不能继承，子类可以用super()调用父类构造&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;JVM启动后会自动创建多条线程，main方法里面的代码运行在main线程&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Java抢占式调度就是随机调度，优先级默认5，t.setPriority(1)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;守护线程，t.setDaemon(true)； 当其他线程运行完毕后，守护线程也会陆续结束&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;礼让线程：Thread.yield(); 单进程不会执行很长时间&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;插队线程：t.jion()；将t线程插入到当前线程之前&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;线程的生命周期：&lt;/p&gt;
+  &lt;img src=&#34;C:/Users/92159/AppData/Roaming/Typora/typora-user-images/image-20250608181739655.png&#34; alt=&#34;image-20250608181739655&#34; style=&#34;zoom: 50%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;父类方法没throw，子类就不能抛&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多线程安全问题：线程执行过程中有随机性，cpu执行权有可能被其他线程抢走，&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;同步代码块：把操作共享对象锁起来、锁默认打开，有线程进去自动上锁，线程将代码块执行完毕后自动开锁，synchronized(static obj){代码块}； 这个obj一定要是唯一的，寓意不同线程看同一个对象的锁，同一把锁，一般是当前类的字节码文件对象currentClass.class&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;同步方法：对方法加锁，非静态方法的锁对象是this，静态方法的锁对象是currentClass.class&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ctrl alt m 所选代码块创建成方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;StringBuilder用在多线程中是不安全的，用StingBuffer安全&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;锁对象：static Lock lock  =new ReentrantLock();lock.lock(); lock.unlock();&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;死锁：锁的嵌套&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;生产者和消费者(等待唤醒机制)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;等待唤醒机制(阻塞队列方式实现)：生产者消费者使用同一个阻塞队列，ArrayBlockingQueue底层已经加锁了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;线程池：存放线程、创建线程池后提交任务会自动创建线程、有上限pool = Executors.newCachedThreadPool(); 无上限Fixed；pool.submit(new MyRunnable()); pool.shutdown();&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;自定义线程池：核心线程忙，队伍排满才会创建临时线程处理队伍后面的，所以先提交的任务不一定先执行，满负荷工作就将后面的拒绝服务、ThreadPoolExecutor(核心线程数， 最大线程数， 空闲线程最大存活时间，s/m，阻塞队列，创建线程工厂Executors.dufaultThreadFactory()，拒绝策略new ThreadPoolExecutor.AbortPolicy())&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单独存在没意义又是一个独立个体的封装为内部类&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;线程池大小：cpu密集型 最大并行+1、io密集型 最大并行*利用率*总时间/计算时间&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;0609-day14-pp1168-200&#34;&gt;0609 day14 PP1168-200
+&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;IPV4 32位 V6128位&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;192.168.开头的是局域网IP，解决ip不够的问题&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;127.0.0.1，localhost是回送地址也叫本机回环地址，本机ip、这个地址和真正的本机地址不一样，发数据的时候网关一看是这个地址就发给自己了&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;InetAddress没有对外构造方法、InetAddress.getByName(“主机名”)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;端口：应用程序在设备中的唯一标识、0~65535、一个端口只能被一个程序使用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;协议：链接和通信的规则称为网络通信协议&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;UDP：面向无连接协议，连不链接的上都发送，速度快、最大64KB，数据不安全，易丢失数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TCP：面向连接协议，速度慢，大小不限制，数据安全&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;UDP发送：DatagramSocket ds；dp = new DatagramPacket(str.getBytes(), len, address, port); ds.send(dp);&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;UDP接收：接收的时候要绑定端口、DatagramSocket(port) ds; dp1=new DatagramPacket(Bytes()[], len); ds.receive(dp); 解析dp1.getData(); dp1.getLength(); dp1.getAddress();ds.close()&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;UDP三种通讯方式：单播组播广播，一个 一组 全部接收、广播发到255.255.255.255局域网里面所有设备都能接收到&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TCP在发送数据前需要保证连接已经建立：客户端：Socket socket = new Socket(&amp;ldquo;127.0.0.1&amp;rdquo;, 10000); os=socket.getOutputStream(); os.write(“haha”.getBytes());再释放资源、服务器：ServerSocket ss; socket = ss.accept(); is=socket .getInputStream();只关socket即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;上面接收中文的时候一个个接收的，这时候就用转换流转化为字符流&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;UUID生成随机码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;反射&lt;/strong&gt;：从字节码文件获取类里面的所有信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取字节码文件对象：clazz = Class.forName(“全类名”)；当参数用Stu.class; s.getClass();&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;构造方法：clazz.getConstructors(); cla = clazz.getDeclaredConstructor(String.class, int.class)获取私有构造方法；cla.setAccessible(true)临时取消权限校验； Stu s = (Stu)cla.newInstance(“zs”, 23)暴力反射创建对象、没有Declared就获取公共的、也能是Constructor&lt;strong&gt;s&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;成员变量：Constructor 换成 Field; 对获取的成员变量进行操作name.getModifiers()权限修饰符;getName(); getType()；name.get(s)，这个是对象，获取对象的name； name.set(s, “ghahah”)，将s对象的name修改为···&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;成员方法：换成 Method; getMethods()能获取包含父类的方法； getDeclaredMethods()只能获取当前里类的方法； m = getMethod(“方法名”, 参数类型);m.invoke(s, “方法实际参数”) 用s调用m方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;反射获取类里面的信息，替代Getteer and Seetter？结合配置文件创建对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;动态代理：无侵入式给对象增加其他功能，代理对象先调用代理中的方法，代理再去调用对象中的方法； 将需要代理的方法写在接口中，接口里面不需要方法体，都是抽象方法，对象和代理都实现这个接口&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>MyFirstBlog</title>
+        <link>https://yuefengw.github.io/p/myfirstblog/</link>
+        <pubDate>Mon, 22 Sep 2025 21:37:57 +0800</pubDate>
+        
+        <guid>https://yuefengw.github.io/p/myfirstblog/</guid>
         <description>&lt;h3 id=&#34;hello-world&#34;&gt;Hello World~
 &lt;/h3&gt;</description>
         </item>
