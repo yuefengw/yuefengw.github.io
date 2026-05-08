@@ -445,10 +445,11 @@ body::before {
         </div>
         <div class="project-body">
           <ul class="project-highlights">
-            <li>面向复杂任务构建任务理解与<strong>动态路由机制</strong>，依据模型推理+规则约束将请求智能分发至不同执行路径，并基于<strong>LangGraph</strong>编排链路支持DAG、Research、Multi-Agent等多种Agent执行模式。</li>
+            <li>面向复杂任务构建任务理解与<strong>动态路由机制</strong>，依据模型推理+规则约束将请求智能分发至不同执行路径，并基于LangGraph编排链路支持Sample、DAG、Research、Multi-Agent等多种Agent执行模式。</li>
             <li>实现基于<strong>ReAct的Multi-Agent协作框架</strong>，采用主Agent规划调度、多角色并发执行；通过任务板、共享工作区与点对点消息机制实现多Agent协作，并支持基于idle状态的任务再分配以及运行中的human-in-the-loop干预。</li>
+            <li>构建<strong>Agent可靠性治理体系</strong>：实现基于WASI的受限代码沙箱、LangSmith全链路观测，以及降级、fallback、熔断、失败重试与token budget控制，支撑多步骤Agent工作流的稳定运行。</li>
             <li>设计并实现<strong>统一工具调用与能力扩展框架</strong>，在LangChain Tool抽象之上构建ToolRegistry管理工具元数据，支持原生工具、MCP工具与OpenAPI工具的统一注册、发现、动态暴露和受控执行。</li>
-            <li>实现会话<strong>记忆检索与上下文压缩</strong>链路，基于Milvus存储会话问答与摘要向量；在多智能体场景下为子智能体分别维护执行历史与关键记忆，并通过上下文裁剪降低长链路执行成本。</li>
+            <li>实现基于Milvus的<strong>会话记忆检索与上下文压缩</strong>链路，通过语义召回和摘要注入等控制长对话场景下的上下文长度。</li>
           </ul>
         </div>
         <div class="tech-tags">
