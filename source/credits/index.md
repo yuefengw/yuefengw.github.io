@@ -7,6 +7,6 @@ comments: false
 
 本站头像为站点作者本人照片。
 
-首页背景照片由 [NESA by Makers](https://unsplash.com/@nesabymakers) 发布于 Unsplash，原始照片链接为 [Unsplash Photo](https://unsplash.com/photos/people-sitting-down-near-table-with-assorted-laptop-computers-kwzWjTnDPLk)。本站按 Unsplash License 使用并进行裁切与压缩。
+首页背景为站点作者提供的图片，本站进行了裁切与压缩。
 
-项目文章封面优先使用项目实际运行界面；其他封面为本站基于自有素材制作的版式图。
+项目文章封面优先使用项目实际运行界面；默认封面为站点作者提供的 AI 生成图片。
