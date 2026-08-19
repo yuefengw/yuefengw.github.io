@@ -98,7 +98,7 @@ aside:
       link: https://github.com/yuefengw
   card_announcement:
     enable: true
-    content: '<div class="announcement-title">参与 LoopX 的建设与改进</div><p>目前正在参与 LoopX 的功能建设、问题修复与持续优化。</p><a class="announcement-action" href="https://github.com/huangruiteng/loopx/issues" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i><span>查看 LoopX Issues</span></a>'
+    content: '<div class="announcement-title">参与 LoopX 的建设与改进</div><p>LoopX 是面向长程 Agent 的开放、厂商中立、有状态控制平面。目前我正在参与其功能建设与持续改进。</p><a class="announcement-action" href="https://github.com/huangruiteng/loopx" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i><span>访问 LoopX 仓库</span></a>'
   card_recent_post:
     enable: true
     limit: 4
