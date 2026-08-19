@@ -45,7 +45,7 @@ comments: false
 <section class="academic-section" id="about-me">
 <h2>About Me</h2>
 <p>I am currently a Master's student at the <strong>School of Computer and Information Technology</strong> and the <strong>Institute of Big Data Science and Industry</strong>, <a href="https://www.sxu.edu.cn/" target="_blank" rel="noopener noreferrer">Shanxi University</a>. I am advised by Prof. <a href="https://feijiangli.github.io/" target="_blank" rel="noopener noreferrer">Feijiang Li</a> and work with Prof. <a href="https://dig.sxu.edu.cn/qyh/" target="_blank" rel="noopener noreferrer">Yuhua Qian's team</a>.</p>
-<p>Before that, I received my bachelor's degree from <strong>Shanxi Agricultural University</strong>. I am currently an intern at <strong>RongCloud</strong>, where I work on collaborative office agent development.</p>
+<p>Before that, I received my bachelor's degree from <strong>Shanxi Agricultural University</strong>. I am currently an intern at <a href="https://www.rongcloud.cn/" target="_blank" rel="noopener noreferrer">RongCloud</a>, contributing to <a href="https://www.lyrawork.com/" target="_blank" rel="noopener noreferrer">LyraWork</a>, a Feishu-like collaborative office platform, and <a href="https://enterprise.rongcloud.cn/product_sume?_gl=1*1cti1qn*_gcl_au*MTY4MzYyNTM4Mi4xNzgzNjQ5NTI2" target="_blank" rel="noopener noreferrer">SUMe</a>, a collaborative office agent running on LyraWork for team collaboration and everyday office scenarios.</p>
 <p>My research focuses on <strong>transfer learning</strong>, <strong>domain adaptation</strong>, and <strong>long-horizon agents</strong>.</p>
 </section>
 
@@ -62,7 +62,7 @@ comments: false
 <h2>News</h2>
 <ul class="academic-news-list">
 <li><strong>[2026]</strong> Our paper <a href="https://github.com/yuefengw/CASE-UniDA" target="_blank" rel="noopener noreferrer">CASE</a> was published in IEEE Transactions on Multimedia.</li>
-<li><strong>[Present]</strong> Working on collaborative office agent development at RongCloud.</li>
+<li><strong>[Present]</strong> Contributing to <a href="https://www.lyrawork.com/" target="_blank" rel="noopener noreferrer">LyraWork</a> and <a href="https://enterprise.rongcloud.cn/product_sume?_gl=1*1cti1qn*_gcl_au*MTY4MzYyNTM4Mi4xNzgzNjQ5NTI2" target="_blank" rel="noopener noreferrer">SUMe</a> collaborative office agent development at <a href="https://www.rongcloud.cn/" target="_blank" rel="noopener noreferrer">RongCloud</a>.</li>
 </ul>
 </section>
 
@@ -126,7 +126,7 @@ comments: false
 <section class="academic-section" id="experience">
 <h2>Experience</h2>
 <ul class="academic-entry-list">
-<li><strong>Intern, Collaborative Office Agent Development</strong> at RongCloud<br><em>Present</em><br>Working on agent systems for collaborative office scenarios, with an emphasis on long-horizon task execution, context organization, tool coordination, and engineering reliability.</li>
+<li><strong>Intern, Collaborative Office Agent Development</strong> at <a href="https://www.rongcloud.cn/" target="_blank" rel="noopener noreferrer">RongCloud</a><br><em>Present</em><br>Contributing to <a href="https://www.lyrawork.com/" target="_blank" rel="noopener noreferrer">LyraWork</a>, a Feishu-like collaborative office platform, and <a href="https://enterprise.rongcloud.cn/product_sume?_gl=1*1cti1qn*_gcl_au*MTY4MzYyNTM4Mi4xNzgzNjQ5NTI2" target="_blank" rel="noopener noreferrer">SUMe</a>, a collaborative office agent for team collaboration and everyday office scenarios. My work focuses on long-horizon task execution, context organization, tool coordination, and engineering reliability.</li>
 </ul>
 </section>
 
