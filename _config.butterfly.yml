@@ -17,7 +17,7 @@ social:
   fas fa-pen-nib: https://blog.csdn.net/qq_41725967?type=blog || CSDN || '#e33e33'
   fas fa-envelope: mailto:wyf010219@163.com || Email || '#3478c6'
 
-favicon: /images/site/avatar.webp
+favicon: /images/site/favicon.svg
 
 avatar:
   img: /images/site/avatar.webp

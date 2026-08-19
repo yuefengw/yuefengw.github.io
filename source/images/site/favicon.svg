@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title>WYF technical site icon</title>
+  <desc>Abstract connected nodes forming a W</desc>
+  <rect width="64" height="64" rx="16" fill="#0f172a"/>
+  <path d="M12 18 21 45 32 27 43 45 52 18" fill="none" stroke="#67e8f9" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+  <circle cx="12" cy="18" r="4" fill="#34d399"/>
+  <circle cx="21" cy="45" r="4" fill="#34d399"/>
+  <circle cx="32" cy="27" r="4" fill="#fbbf24"/>
+  <circle cx="43" cy="45" r="4" fill="#34d399"/>
+  <circle cx="52" cy="18" r="4" fill="#34d399"/>
+</svg>
