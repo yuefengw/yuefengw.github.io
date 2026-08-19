@@ -1,0 +1,198 @@
+nav:
+  logo: /images/site/avatar.webp
+  display_title: true
+  display_post_title: true
+  fixed: true
+
+menu:
+  首页: / || fas fa-home
+  分类: /categories/ || fas fa-folder-open
+  标签: /tags/ || fas fa-tags
+  归档: /archives/ || fas fa-box-archive
+  项目: /projects/ || fas fa-layer-group
+  学术主页: /academic/ || fas fa-graduation-cap
+
+social:
+  fab fa-github: https://github.com/yuefengw || GitHub || '#24292e'
+  fas fa-pen-nib: https://blog.csdn.net/qq_41725967?type=blog || CSDN || '#e33e33'
+  fas fa-envelope: mailto:wyf010219@163.com || Email || '#3478c6'
+
+favicon: /images/site/avatar.webp
+
+avatar:
+  img: /images/site/avatar.webp
+  effect: false
+
+disable_top_img: true
+default_top_img: false
+index_img: false
+archive_img: false
+tag_img: false
+category_img: false
+footer_img: false
+background: /images/site/background.webp
+
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  default_cover:
+    - /images/posts/default-cover.webp
+
+error_img:
+  flink: /images/posts/default-cover.webp
+  post_page: /images/posts/default-cover.webp
+
+error_404:
+  enable: true
+  subtitle: 页面没有找到，返回首页继续浏览。
+  background: /images/site/background.webp
+
+post_meta:
+  page:
+    date_type: created
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+  post:
+    position: left
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+
+index_layout: 3
+
+index_post_content:
+  method: 3
+  length: 180
+
+footer:
+  owner:
+    enable: true
+    since: 2026
+  copyright:
+    enable: true
+    version: false
+  custom_text: '<a href="/credits/">图片来源与许可</a>'
+
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: left
+  display:
+    archive: true
+    tag: true
+    category: true
+  card_author:
+    enable: true
+    description: Agent 开发 · 大模型应用 · Java 后端
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/yuefengw
+  card_announcement:
+    enable: true
+    content: '<div class="announcement-title">新的个人主页正在生长</div><p>这里会持续记录 Agent、RAG 和后端工程实践。</p><a class="announcement-action" href="/projects/"><i class="fas fa-layer-group"></i><span>查看项目</span></a>'
+  card_recent_post:
+    enable: true
+    limit: 4
+    sort: date
+  card_newest_comments:
+    enable: false
+  card_categories:
+    enable: true
+    limit: 8
+    expand: true
+  card_tags:
+    enable: true
+    limit: 24
+    color: false
+    orderby: length
+    order: -1
+  card_archives:
+    enable: true
+    type: monthly
+    format: YYYY年MM月
+    order: -1
+    limit: 8
+  card_post_series:
+    enable: true
+    series_title: false
+    orderBy: date
+    order: 1
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    runtime_date: 2026/08/19
+
+readmode: true
+
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+
+rightside_scroll_percent: true
+rightside_config_animation: false
+
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+busuanzi:
+  site_uv: false
+  site_pv: false
+  page_pv: false
+
+search:
+  use: local_search
+  placeholder: 搜索文章、项目或技术关键词
+  local_search:
+    preload: false
+    top_n_per_article: 2
+    unescape: false
+    pagination:
+      enable: true
+      hitsPerPage: 8
+
+share:
+  use:
+
+comments:
+  use:
+  text: true
+  lazyload: false
+  count: false
+  card_post_count: false
+
+Open_Graph_meta:
+  enable: true
+
+structured_data:
+  enable: true
+  alternate_name:
+    - Wang Yuefeng
+    - Yuefeng Wang
+
+enter_transitions: true
+
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/custom.css?v=20260819a">
+  bottom:
+    - <script src="/js/github-calendar.js?v=20260819" defer></script>
+    - <script src="/js/site.js?v=20260819" defer></script>
+
+CDN:
+  internal_provider: local
+  third_party_provider: jsdelivr
+  version: true

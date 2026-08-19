@@ -1,0 +1,36 @@
+{
+  "name": "yuefengw-github-io",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Wang Yuefeng's personal blog and project portfolio",
+  "scripts": {
+    "clean": "node tools/hexo.mjs clean",
+    "build": "node tools/hexo.mjs generate",
+    "server": "node tools/hexo.mjs server --port 4000",
+    "check": "npm run clean && npm run build && node tools/check-build.mjs",
+    "dev": "node tools/hexo.mjs server --draft --port 4000"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "hexo": "7.3.0",
+    "hexo-generator-archive": "2.0.0",
+    "hexo-generator-category": "2.0.0",
+    "hexo-generator-feed": "3.0.0",
+    "hexo-generator-index": "4.0.0",
+    "hexo-generator-searchdb": "1.5.0",
+    "hexo-generator-sitemap": "3.0.1",
+    "hexo-generator-tag": "2.0.0",
+    "hexo-renderer-marked": "7.0.1",
+    "hexo-renderer-pug": "3.0.0",
+    "hexo-renderer-stylus": "3.0.1",
+    "hexo-server": "3.0.0",
+    "hexo-theme-butterfly": "5.7.0",
+    "hexo-wordcount": "6.0.1",
+    "sharp": "^0.35.3",
+    "turndown": "^7.2.1",
+    "turndown-plugin-gfm": "^1.0.2"
+  }
+}
