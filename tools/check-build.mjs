@@ -133,4 +133,31 @@ if (invalidPiArticles.length > 0) {
   process.exit(1)
 }
 
-console.log(`Build check passed: ${requiredFiles.length} files, ${requiredHomepageMarkers.length} homepage modules, ${requiredAcademicMarkers.length} academic markers, ${importedPostFiles.length} imported CSDN posts, and ${piArticleSlugs.length} Pi articles verified`)
+const goalArticleSlugs = [
+  'codex-goal-mode-1-agent-loop-contract',
+  'codex-goal-mode-2-persistence-state-machine',
+  'codex-goal-mode-3-runtime-continuation-budget',
+  'codex-goal-mode-4-audit-failures-practice'
+]
+
+const missingGoalArticles = []
+for (const slug of goalArticleSlugs) {
+  try {
+    const source = await fs.readFile(`source/_posts/${slug}.md`, 'utf8')
+    await fs.access(`public/posts/${slug}/index.html`)
+    if (!source.includes('cover: /images/posts/codex-goal-cover.webp')) {
+      missingGoalArticles.push(`${slug} (missing series cover)`)
+    }
+  } catch {
+    missingGoalArticles.push(slug)
+  }
+}
+
+if (missingGoalArticles.length > 0) {
+  console.error(`Missing or incomplete Codex Goal articles:\n${missingGoalArticles.join('\n')}`)
+  process.exit(1)
+}
+
+await fs.access('public/images/posts/codex-goal-cover.webp')
+
+console.log(`Build check passed: ${requiredFiles.length} files, ${requiredHomepageMarkers.length} homepage modules, ${requiredAcademicMarkers.length} academic markers, ${importedPostFiles.length} imported CSDN posts, ${piArticleSlugs.length} Pi articles, and ${goalArticleSlugs.length} Codex Goal articles verified`)
