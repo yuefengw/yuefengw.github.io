@@ -23,6 +23,9 @@ comments: false
 <a href="https://github.com/yuefengw" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
 <i class="fab fa-github" aria-hidden="true"></i>
 </a>
+<a href="https://x.com/yuefengw12?s=11" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" title="X (Twitter)">
+<i class="fab fa-x-twitter" aria-hidden="true"></i>
+</a>
 <a href="mailto:wyf010219@163.com" aria-label="Email" title="Email">
 <i class="fas fa-envelope" aria-hidden="true"></i>
 </a>

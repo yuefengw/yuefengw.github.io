@@ -52,6 +52,12 @@ if (!homepage.includes('/academic/') || !homepage.includes('学术主页')) {
   process.exit(1)
 }
 
+const xProfileUrl = 'https://x.com/yuefengw12?s=11'
+if (!homepage.includes(xProfileUrl)) {
+  console.error('Homepage is missing the X (Twitter) profile link')
+  process.exit(1)
+}
+
 const academicPage = await fs.readFile('public/academic/index.html', 'utf8')
 const requiredAcademicMarkers = [
   'academic-local-nav',
@@ -65,6 +71,11 @@ const requiredAcademicMarkers = [
 const missingAcademicMarkers = requiredAcademicMarkers.filter(marker => !academicPage.includes(marker))
 if (missingAcademicMarkers.length > 0) {
   console.error(`Academic page is missing expected content: ${missingAcademicMarkers.join(', ')}`)
+  process.exit(1)
+}
+
+if (!academicPage.includes(xProfileUrl)) {
+  console.error('Academic page is missing the X (Twitter) profile link')
   process.exit(1)
 }
 
