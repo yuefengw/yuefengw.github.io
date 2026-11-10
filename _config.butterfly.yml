@@ -91,7 +91,7 @@ aside:
     category: true
   card_author:
     enable: true
-    description: Agent 开发 · 大模型应用 · Java 后端
+    description: 迁移学习 · Agent · 具身智能
     button:
       enable: true
       icon: fab fa-github

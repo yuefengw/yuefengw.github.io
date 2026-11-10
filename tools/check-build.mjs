@@ -62,10 +62,12 @@ const academicPage = await fs.readFile('public/academic/index.html', 'utf8')
 const requiredAcademicMarkers = [
   'academic-local-nav',
   'Transfer Learning',
-  'Long-Horizon Agents',
-  'CASE: Cross-modal Semantic Anchoring Alignment and Structure Enhancement for Universal Domain Adaptation',
-  'Text-Assisted Regression Lower Bound for Unsupervised Domain Adaptation',
+  'Embodied Intelligence',
+  'Cross-modal Semantic Anchoring Alignment and Structure Enhancement for Universal Domain Adaptation',
+  'Text-Assisted Unsupervised Domain Adaptation for Image Regression through Semantic Re-encoding',
   'Distilling Reliable Knowledge from VLM for Unsupervised Domain Adaptation',
+  'Application and Research of Prediction Model Based on Machine Learning Algorithm',
+  '一种基于语义引导对齐与结构增强的跨域未知信号检测方法',
   'RongCloud'
 ]
 const missingAcademicMarkers = requiredAcademicMarkers.filter(marker => !academicPage.includes(marker))
