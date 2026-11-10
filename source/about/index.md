@@ -6,7 +6,7 @@ comments: false
 ---
 
 <div class="about-intro">
-  <img src="/images/site/avatar.webp" alt="王越峰" class="about-avatar">
+  <img src="/images/site/avatar-blog-20261110.webp" alt="王越峰" class="about-avatar">
   <div>
     <p class="about-kicker">WANG YUEFENG</p>
     <h2>把模型能力做成可靠、可维护的产品</h2>

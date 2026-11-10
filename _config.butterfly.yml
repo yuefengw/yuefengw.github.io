@@ -1,5 +1,5 @@
 nav:
-  logo: /images/site/avatar.webp
+  logo: /images/site/avatar-blog-20261110.webp
   display_title: true
   display_post_title: true
   fixed: true
@@ -21,7 +21,7 @@ social:
 favicon: /images/site/favicon.svg
 
 avatar:
-  img: /images/site/avatar.webp
+  img: /images/site/avatar-blog-20261110.webp
   effect: false
 
 disable_top_img: true
