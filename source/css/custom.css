@@ -202,7 +202,7 @@ body::before {
 }
 
 #aside-content .card-info .avatar-img img {
-  border: 3px solid rgba(255, 255, 255, 0.96);
+  border: 0;
   box-shadow: 0 5px 18px rgba(15, 23, 42, 0.18);
 }
 
@@ -945,7 +945,7 @@ body::before {
 
 .academic-pub-row {
   display: grid;
-  grid-template-columns: 155px minmax(0, 1fr);
+  grid-template-columns: 190px minmax(0, 1fr);
   align-items: center;
   gap: 20px;
   margin: 1.5em 0;
@@ -954,7 +954,7 @@ body::before {
 .academic-pub-visual {
   position: relative;
   display: flex;
-  min-height: 112px;
+  min-height: 125px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -965,7 +965,7 @@ body::before {
 .academic-pub-visual img {
   display: block;
   width: 100%;
-  height: 112px;
+  height: 125px;
   margin: 0;
   object-fit: contain;
 }
@@ -1133,7 +1133,7 @@ body::before {
   }
 
   .academic-pub-visual {
-    width: 210px;
+    width: 260px;
     margin-bottom: 11px;
   }
 }

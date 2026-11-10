@@ -49,7 +49,7 @@ comments: false
 <h2>About Me</h2>
 <p>I am currently a Master's student at the <strong>School of Computer and Information Technology</strong> and the <strong>Institute of Big Data Science and Industry</strong>, <a href="https://www.sxu.edu.cn/" target="_blank" rel="noopener noreferrer">Shanxi University</a>. I am advised by Prof. <a href="https://feijiangli.github.io/" target="_blank" rel="noopener noreferrer">Feijiang Li</a> and work with Prof. <a href="https://dig.sxu.edu.cn/qyh/" target="_blank" rel="noopener noreferrer">Yuhua Qian's team</a>.</p>
 <p>Before that, I received my bachelor's degree from <strong>Shanxi Agricultural University</strong>. From June to October 2026, I interned at <a href="https://www.rongcloud.cn/" target="_blank" rel="noopener noreferrer">RongCloud</a>, contributing to <a href="https://www.lyrawork.com/" target="_blank" rel="noopener noreferrer">LyraWork</a>, a Feishu-like collaborative office platform, and <a href="https://enterprise.rongcloud.cn/product_sume" target="_blank" rel="noopener noreferrer">SUMe</a>, a collaborative office agent running on LyraWork.</p>
-<p>My research focuses on <strong>transfer learning</strong>, <strong>agents</strong>, and <strong>embodied intelligence</strong>.</p>
+<p>My research focuses on <strong>transfer learning</strong>, <strong>long-horizon agents</strong>, and <strong>embodied intelligence</strong>.</p>
 </section>
 
 <section class="academic-section" id="research-interests">
@@ -89,9 +89,8 @@ comments: false
 </article>
 
 <article class="academic-pub-row">
-<div class="academic-pub-visual academic-pub-placeholder">
-<strong>ICLR</strong>
-<small>Under Review</small>
+<div class="academic-pub-visual">
+<img src="/images/academic/text-assisted-framework.png" alt="Framework of Text-Assisted Unsupervised Domain Adaptation for Image Regression through Semantic Re-encoding">
 <abbr class="academic-pub-badge" title="International Conference on Learning Representations">ICLR</abbr>
 </div>
 <div class="academic-pub-details">
@@ -103,9 +102,8 @@ comments: false
 </article>
 
 <article class="academic-pub-row">
-<div class="academic-pub-visual academic-pub-placeholder">
-<strong>CVPR</strong>
-<small>Under Review</small>
+<div class="academic-pub-visual">
+<img src="/images/academic/vlm-distillation-framework.png" alt="Framework of Distilling Reliable Knowledge from VLM for Unsupervised Domain Adaptation">
 <abbr class="academic-pub-badge" title="Conference on Computer Vision and Pattern Recognition">CVPR</abbr>
 </div>
 <div class="academic-pub-details">
@@ -117,9 +115,8 @@ comments: false
 </article>
 
 <article class="academic-pub-row">
-<div class="academic-pub-visual academic-pub-placeholder">
-<strong>ICIPCA</strong>
-<small>2023</small>
+<div class="academic-pub-visual">
+<img src="/images/academic/icipca-prediction-framework.png" alt="Framework of Application and Research of Prediction Model Based on Machine Learning Algorithm">
 <abbr class="academic-pub-badge" title="IEEE International Conference on Image Processing and Computer Applications">IEEE</abbr>
 </div>
 <div class="academic-pub-details">

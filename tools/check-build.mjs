@@ -62,6 +62,7 @@ const academicPage = await fs.readFile('public/academic/index.html', 'utf8')
 const requiredAcademicMarkers = [
   'academic-local-nav',
   'Transfer Learning',
+  'long-horizon agents',
   'Embodied Intelligence',
   'Cross-modal Semantic Anchoring Alignment and Structure Enhancement for Universal Domain Adaptation',
   'Text-Assisted Unsupervised Domain Adaptation for Image Regression through Semantic Re-encoding',
