@@ -165,6 +165,14 @@ search:
       enable: true
       hitsPerPage: 8
 
+math:
+  use: mathjax
+  per_page: false
+  hide_scrollbar: false
+  mathjax:
+    enableMenu: false
+    tags: none
+
 share:
   use:
 

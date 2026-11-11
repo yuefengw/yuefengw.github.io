@@ -2,7 +2,8 @@
 title: "VLA 学习笔记：从 RT-1、RT-2 到 RT-X 与 OpenVLA"
 slug: vla-from-rt1-to-openvla
 date: 2026-11-10 21:30:00
-updated: 2026-11-10 21:30:00
+updated: 2026-11-11 10:00:00
+mathjax: true
 categories:
   - "人工智能"
   - "具身智能"
@@ -78,9 +79,9 @@ RT-2 最精炼的思想是：**动作不是挂在语言模型之外的额外回�
 
 RT-2 沿用 RT-1 的末端执行器动作表示，而不是直接输出每个关节角。一个时间步包含：
 
-```text
-[terminate, Δx, Δy, Δz, Δrx, Δry, Δrz, gripper]
-```
+$$
+[\mathrm{terminate},\Delta x,\Delta y,\Delta z,\Delta r_x,\Delta r_y,\Delta r_z,\mathrm{gripper}]
+$$
 
 其中六个维度描述末端执行器的位置与旋转增量，一个维度描述夹爪开合程度，`terminate` 是任务是否完成的离散指令。
 
@@ -90,15 +91,15 @@ RT-2 沿用 RT-1 的末端执行器动作表示，而不是直接输出每个关
 
 除 `terminate` 外，每个连续维度都被**独立、均匀地划分为 256 个区间**。设某个动作维度的范围为 `[a_min, a_max]`，实际动作为 `a`，可以把量化过程写成：
 
-```text
-bin = clip(floor((a - a_min) / (a_max - a_min) * 256), 0, 255)
-```
+$$
+b=\operatorname{clip}\!\left(\left\lfloor\frac{a-a_{\min}}{a_{\max}-a_{\min}}\cdot256\right\rfloor,0,255\right)
+$$
 
 反量化时，可以取对应区间的中心：
 
-```text
-a_hat = a_min + (bin + 0.5) / 256 * (a_max - a_min)
-```
+$$
+\hat a=a_{\min}+\frac{b+0.5}{256}\left(a_{\max}-a_{\min}\right)
+$$
 
 举一个只用于解释原理的例子。假设 X 方向每步位移范围为 `[-0.05, 0.05] m`，那么每个 Bin 的宽度约为 `0.391 mm`。`Δx = 0.01 m` 会落入 Bin 153，推理时再由 Bin 153 恢复成该区间中心附近的位移。
 
@@ -154,9 +155,9 @@ RT-2 主要扩大了**知识来源**，Open X-Embodiment 则进一步扩大了**
 
 数据处理确实尽量采用统一接口：
 
-```text
-[Δx, Δy, Δz, Δroll, Δpitch, Δyaw, gripper]
-```
+$$
+[\Delta x,\Delta y,\Delta z,\Delta\mathrm{roll},\Delta\mathrm{pitch},\Delta\mathrm{yaw},\mathrm{gripper}]
+$$
 
 图像被调整到统一输入规格，动作按各数据集的统计量归一化，再离散为 256 个 Bin。但论文明确指出，不同数据集之间仍可能存在：
 
@@ -201,19 +202,103 @@ OpenVLA 是一个 7B 参数模型，在 Open X-Embodiment 的 970k 条机器人�
 
 OpenVLA 的价值主要体现在三个方面。
 
-### 5.1 更小但有竞争力
+### 5.1 为什么使用分位数分桶
+
+分位数分桶的直觉是：**不要让极少数异常值占据大部分离散化范围，而要把有限的 256 个 Bin 集中分配给机器人最常执行的动作区间。**
+
+假设我们收集了 10,000 条机器人 X 轴移动数据。绝大多数动作都很小：
+
+$$
+\Delta x\in[-0.1,0.1]\ \mathrm{m}
+$$
+
+但数据中还有少量极端动作，例如：
+
+$$
+-2.0,\qquad 1.5,\qquad 2.0\ \mathrm{m}
+$$
+
+这些值可能来自异常控制或数据采集问题，也可能是真实的大幅度运动。假设该维度的统计量如下：
+
+| 统计量 | 数值 |
+| :-- | --: |
+| Min | $-2.0\ \mathrm{m}$ |
+| 1% 分位数 $Q_{0.01}$ | $-0.1\ \mathrm{m}$ |
+| 99% 分位数 $Q_{0.99}$ | $0.1\ \mathrm{m}$ |
+| Max | $2.0\ \mathrm{m}$ |
+
+Min-Max 与 Quantile 都使用均匀间隔，但二者选择的覆盖范围完全不同。下面的橙色区域表示绝大多数动作所在的 $[-0.1,0.1]$ 区间：在完整的 Min-Max 范围中它只占很小一段，而在 Quantile 范围中它占据全部 256 个 Bin。
+
+<div class="vla-bin-diagram" role="img" aria-label="Min-Max 与 Quantile 动作分桶范围对比">
+  <div class="vla-bin-row">
+    <strong>Min-Max</strong>
+    <div class="vla-bin-track vla-bin-track-minmax"><span></span></div>
+    <small>−2.0 m　　　　　　　　　0　　　　　　　　　2.0 m</small>
+  </div>
+  <div class="vla-bin-row">
+    <strong>Quantile</strong>
+    <div class="vla-bin-track vla-bin-track-quantile"><span></span></div>
+    <small>−0.1 m　　　　　　　　0　　　　　　　　0.1 m</small>
+  </div>
+</div>
+
+#### Min-Max 划分
+
+Min-Max 使用完整数据范围：
+
+$$
+[a_{\min},a_{\max}]=[-2,2]
+$$
+
+256 个 Bin 的宽度为：
+
+$$
+\begin{aligned}
+\Delta_{\mathrm{MinMax}}&=\frac{2-(-2)}{256}\\
+&=0.015625\ \mathrm{m}=15.625\ \mathrm{mm}
+\end{aligned}
+$$
+
+#### OpenVLA Quantile 划分
+
+OpenVLA 使用第 1 与第 99 百分位作为边界：
+
+$$
+[Q_{0.01},Q_{0.99}]=[-0.1,0.1]
+$$
+
+256 个 Bin 的宽度为：
+
+$$
+\begin{aligned}
+\Delta_{\mathrm{Quantile}}&=\frac{0.1-(-0.1)}{256}\\
+&=0.00078125\ \mathrm{m}=0.78125\ \mathrm{mm}
+\end{aligned}
+$$
+
+因此在这个假设示例中：
+
+$$
+\frac{\Delta_{\mathrm{MinMax}}}{\Delta_{\mathrm{Quantile}}}=\frac{15.625}{0.78125}=20
+$$
+
+Quantile 分桶的理论动作量化分辨率提高了 **20 倍**。这并不意味着机器人的最终执行精度也提高 20 倍；它只说明离散化产生的数值分辨率改善了。真实精度仍受传感器噪声、控制频率、机械结构、底层控制器和模型预测误差等因素影响。
+
+超过 $[Q_{0.01},Q_{0.99}]$ 的动作值在量化时会被截断到边界 Bin。因此，分位数分桶是在**主体动作的分辨率**与**极端动作的表示能力**之间做取舍，而不是无条件优于 Min-Max。
+
+### 5.2 更小但有竞争力
 
 论文在 WidowX/BridgeData V2 和 Google Robot 上对比 RT-1-X、RT-2-X 与 Octo。OpenVLA 只有 7B 参数，在 Google Robot 评估中与 55B 的 RT-2-X 表现相近，并在 BridgeData V2 评估中明显优于 RT-2-X。
 
 这不应简单解释成“7B 架构一定优于 55B”。论文指出，结果还受更大的机器人训练集、数据清洗和双视觉编码器等因素影响；RT-2-X 在强语义泛化任务上仍有优势，因为它使用更大规模的互联网预训练，并在微调时继续混合 Web 数据。
 
-### 5.2 能适配新机器人和新任务
+### 5.3 能适配新机器人和新任务
 
 OpenVLA 系统评估了对新 Franka 机器人任务的微调。在每个任务只有 10 到 150 条示范的条件下，它在多指令、含干扰物、依赖语言落地的任务上显示出预训练通用策略的优势。
 
 论文也给出了一个很实用的结论：LoRA rank 32 只训练约 1.4% 参数，成功率接近全量微调，并把训练从 8 张 A100 降到单张 A100 上约 10 到 15 小时。对于希望在自有机器人上验证 VLA 的研究者，这比单纯的排行榜结果更有意义。
 
-### 5.3 量化让部署门槛下降
+### 5.4 量化让部署门槛下降
 
 OpenVLA 的 bfloat16 推理约占 16.8 GB 显存；4-bit 量化可降到约 7.0 GB，并在论文的 Bridge 任务上保持相近成功率。8-bit 量化反而因额外开销降低控制频率，导致真实机器人性能下降。
 
